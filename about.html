@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Amayah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Amayah</a>
+      <nav class="nav" id="mainNav">
+        <a href="menu.html">Menu</a>
+        <a href="orders.html">Orders</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="header-actions">
+        <a href="orders.html" class="orders-btn" aria-label="Order history" title="Order history">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" />
+            <rect x="9" y="3" width="6" height="4" rx="1" />
+            <path d="M9 12h6M9 16h4" />
+          </svg>
+        </a>
+        <a href="menu.html" class="cart-btn" aria-label="Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 6h15l-1.5 9h-12z" />
+            <circle cx="9" cy="20" r="1" />
+            <circle cx="18" cy="20" r="1" />
+            <path d="M6 6L5 3H2" />
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="about-section page-section">
+      <div class="container about-inner">
+        <div class="about-text">
+          <h2>About Amayah</h2>
+          <p>
+            We are a full-service restaurant in Addis Ababa serving breakfast through dinner.
+            From classic starters and fresh salads to chef specials, pizza, and
+            wings — everything is prepared in-house with quality ingredients.
+          </p>
+          <p>
+            At Amayah we believe great food brings people together. Whether you are
+            here for a quick lunch or a long dinner, we are glad you came.
+          </p>
+          <p class="about-hours">
+            <strong>Hours:</strong> Daily 10:00 – 22:00<br />
+            <strong>Delivery:</strong> +251 11 123 4567 · www.amayah.et
+          </p>
+        </div>
+        <div class="about-card">
+          <div class="stat">
+            <span class="stat-num">8</span>
+            <span class="stat-label">Categories</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">40+</span>
+            <span class="stat-label">Dishes</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">★</span>
+            <span class="stat-label">Chef Picks</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Amayah · Addis Ababa, Ethiopia</p>
+    </div>
+  </footer>
+
+  <script src="cart-shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Amayah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Amayah</a>
+      <nav class="nav" id="mainNav">
+        <a href="menu.html" class="active">Menu</a>
+        <a href="orders.html">Orders</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="header-actions">
+        <a href="orders.html" class="orders-btn" aria-label="Order history" title="Order history">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" />
+            <rect x="9" y="3" width="6" height="4" rx="1" />
+            <path d="M9 12h6M9 16h4" />
+          </svg>
+        </a>
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 6h15l-1.5 9h-12z" />
+            <circle cx="9" cy="20" r="1" />
+            <circle cx="18" cy="20" r="1" />
+            <path d="M6 6L5 3H2" />
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="menu-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Full Menu</h2>
+          <p>Many categories · Fresh daily · Chef recommended marked with ★</p>
+        </div>
+
+        <div class="filters" id="filters">
+          <button class="filter-btn active" data-category="all">All</button>
+          <button class="filter-btn" data-category="starters">Starters</button>
+          <button class="filter-btn" data-category="breakfast">Breakfast</button>
+          <button class="filter-btn" data-category="salads">Salads</button>
+          <button class="filter-btn" data-category="wings">Wings &amp; Sides</button>
+          <button class="filter-btn" data-category="pizza">Pizza</button>
+          <button class="filter-btn" data-category="specials">Special Menu</button>
+          <button class="filter-btn" data-category="desserts">Desserts</button>
+          <button class="filter-btn" data-category="drinks">Drinks</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Amayah · Addis Ababa, Ethiopia</p>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Your Order</h3>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your cart is empty</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn" disabled>Place Order</button>
+    </div>
+  </aside>
+
+  <!-- Order Confirmation Modal -->
+  <div class="modal-overlay" id="orderModalOverlay"></div>
+  <div class="order-modal" id="orderModal" role="dialog" aria-labelledby="orderModalTitle" aria-hidden="true">
+    <div class="order-modal-inner">
+      <div class="order-success-icon">✓</div>
+      <h2 id="orderModalTitle">Order Placed!</h2>
+      <p class="order-modal-sub">Thank you for ordering at Amayah</p>
+      <div class="order-modal-details" id="orderModalDetails"></div>
+      <div class="order-modal-actions">
+        <a href="orders.html" class="btn btn-primary">View Order History</a>
+        <button class="btn btn-outline" id="closeOrderModal">Continue Browsing</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="cart-shared.js"></script>
+  <script src="menu-data.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>
